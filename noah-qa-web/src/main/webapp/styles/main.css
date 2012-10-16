@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Segoe";
+  src: url('../font/SegoeL.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+	/* 60px to make the container go all the way to the bottom of the topbar */
+	padding-top: 60px;
+	padding-bottom: 300px;
+	font-family: "Segoe"
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 12px 0;
+}
+input {
+	font-family: "Segoe";
+}
+.form {
+	padding: 12px;
+	border-left: 12px solid #1BA1E2;
+}
+.form-inline .control-label {
+	margin-right: 12px;
+}
+.form-alert {
+	margin-left: 0;
+}
+.form-actions {
+	padding: 12px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+textarea,
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"], 
+.uneditable-input {
+	border-radius: 0;
+}
+.navbar .navbar-inner .brand {
+	font-weight: bold;
+}
+.alert, .btn {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+/** Import Test Suite **/
+.test-suite {
+	padding: 12px;
+	background-color: whiteSmoke;
+}
+.test-suite h3 {
+	border-left: 6px solid;
+	padding-left: 12px;
+}
+.test-suite p {
+	padding-left: 18px;
+}
+.test-scope {
+	background-color: #eee;
+	padding: 12px;
+	margin-bottom: 12px;
+}

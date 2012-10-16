@@ -1,0 +1,22 @@
+<div class="row" ng-controller="LogInCtrl">
+	<div class="span6">
+		<h3>Enter Redmine API Key</h3>
+		<p>Please enter your Redmine API key:</p>
+		<div class="form-inline">
+			<input type="text" name="key" placeholder="API Key..." ng-model="key" ng-change="apiChange()"/>
+			<button class="btn btn-primary check-trigger" ng-click="checkKey()"><i class="icon-search icon-white"></i>&nbsp;Check</button>
+			&nbsp;<img class="loader" src="resources/images/preloader-02.gif" ng-hide="true"/>
+		</div>
+	</div>
+	<div class="span5 candidate-info" ng-hide="true">
+		<h3>{{_user.firstname}}&nbsp;{{_user.lastname}}</h3>
+		<p>{{_user.mail}}</p>
+		<a class="btn btn-primary confirm-trigger" ng-click="confirm()"><i class="icon icon-ok icon-white"></i>&nbsp;Yes, this is me!</a>
+	</div>
+	<div class="span3" ng-hide="true">
+		<div class="alert alert-{{alert.level}}">
+			<h4 class="alert-heading">{{alert.heading}}</h4>
+			<p>{{alert.msg}}</p>
+		</div>
+	</div>
+</div>

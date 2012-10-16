@@ -1,0 +1,41 @@
+<div ng-controller="ImportTestSuiteCtrl">
+	<div class="row">
+		<div class="span6">
+			<h2><i class="icon-upload">&nbsp;</i>Import Test Suit</h2>
+			<div class="form form-inline">
+				<p class="help-block"><i class="icon-info-sign">&nbsp;</i>Select excel file, then click <b>Preview</b>.</p>
+				<div class="control-group">
+					<label class="control-label"><strong>Excel File(.xsl)</strong></label>
+					<div class="controls" style="display: inline;">
+						<input id="import-xls-file-input" type="file" style="width:270px;" />&nbsp;
+					</div>
+				</div>
+			</div>
+			<div class="form-actions">
+				<button class="btn btn-primary import-preview-btn"
+					ng-disabled="!!errors.empty"
+					ng-click="uploadXls()"><i class="icon-eye-open">&nbsp;</i>Preview</button>
+			</div>
+			<div ng-show="errors.invalidExtension && !errors.hideInvalidExtensionMsg" class="alert alert-error form-alert">
+					<button type="button" class="close" ng-click="hideInvalidExtensionMsg()">×</button>
+					Only <strong>.xls</strong> file accepted. Please select other file and try again.
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div ng-show="!!suite" class="span12 test-suite">
+			<div>
+				<h3>Subject</h3>
+				<p ng-bind-html-unsafe="suite.subject"></p>
+				<h3>Objective</h3>
+				<p ng-bind-html-unsafe="suite.objective"></p>
+				<h3>Pre-Condition</h3>
+				<p ng-bind-html-unsafe="suite.preCondition"></p>
+				<h3>Defect Based Testing</h3>
+				<div ng-repeat="scope in suite.defectBasedTestScopes" class="test-scope">
+					<h4>Test Scope: {{scope.name}}</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
