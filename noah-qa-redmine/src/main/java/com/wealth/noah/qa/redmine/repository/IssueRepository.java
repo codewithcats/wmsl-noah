@@ -5,7 +5,7 @@ import java.util.List;
 import com.wealth.noah.qa.redmine.entity.Issue;
 
 public interface IssueRepository {
-	public List<Issue> getIssueAssigneToId(Long userId);
+	public List<Issue> getIssueAssignedToId(Long userId);
 
 	public List<Issue> getRelatedIssues(Long issueId);
 
